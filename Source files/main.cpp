@@ -89,6 +89,8 @@ int main()
         if(answer == 'Y'){
             // If the user wants to replay we maintain the player objects while clearing the board.
             board.clearBoard();
+            // We swap the players so that both players get a chance to start.
+            board.swapPlayers();
             replay = true;
         }else
             replay = false;

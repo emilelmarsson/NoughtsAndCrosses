@@ -30,6 +30,8 @@ public:
 
     int findFirstEmptyTile();
 
+    void swapPlayers();
+
     std::vector<int> returnTiles();
 
     int returnWinner();

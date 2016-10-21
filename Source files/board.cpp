@@ -32,6 +32,13 @@ int Board::getType(){
     return type;
 }
 
+// Swaps the players. Intended so that both players get to play first if they play more than once.
+void Board::swapPlayers(){
+    Player *p = returnPlayer(0);
+    players[0] = players[1];
+    players[1] = p;
+}
+
 // Returns a pointer to the player object at index 0 or 1.
 Player* Board::returnPlayer(int playerIndex){
     if(Board::isValidPlayerIndex(playerIndex)){
